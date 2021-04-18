@@ -1,0 +1,46 @@
+<%-include("partials/header")%>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Camp Booking</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/campground">Campgrounds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>  
+</nav>
+<div class="container">
+  <h1 class="display-4 text-center">Create a new Campground</h1>
+  <div class="w-50 mx-auto my-0">
+    <form action="/campground" method="POST" class="mt-4">
+      <div class="form-group">
+        <label for="camp_name">Name of Camp</label>
+        <input type="text" id="camp_name" class="form-control" name="campName">
+      </div>
+      <div class="form-group">
+        <label for="camp_image">Image Link:</label>
+        <input type="text" id="camp_image" class="form-control" name="campImage">
+      </div> 
+      <div class="form-group">
+        <label for="camp_image">Description:</label>
+        <input type="text" id="camp_image" class="form-control" name="campDesc">
+      </div>      
+        <button type="submit" class="btn btn-primary w-100">Submit</button> 
+    </form>
+    <a href="/campground">Go-back</a>
+  </div>  
+</div>
+<%-include("partials/footer")%>
+

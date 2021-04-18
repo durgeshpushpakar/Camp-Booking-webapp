@@ -1,0 +1,56 @@
+<%-include("partials/header")%>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Camp Booking</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/campground">Campgrounds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>  
+</nav>
+
+
+<div class="container">
+  <header class="jumbotron">
+    <h1 class="display-4 text-dark">Welcome to campgrounds page!</h1>
+    <a class="btn btn-primary btn-lg" href="/campground/new">Add new Camp</a>
+  </header>
+  <!-- ....loop..... -->
+  <div class="row">
+    <%campgrounds.forEach((campground)=>{%>
+      <div class="col-md-6 col-sm-6 col-lg-3">
+        <div class="card">
+          <img src="<%=campground.image%>" class="img-fluid card-img-top" alt="img">
+          <div class="card-body">
+            <h4 class="card-title"> <%=campground.name%></h4>
+          </div>
+          <a href="campground/<%= campground._id %>" class="btn btn-primary w-50">More info</a>
+        </div>
+      </div>
+    <%})%>
+  </div>
+</div>
+<%-include("partials/footer")%>
+

@@ -1,0 +1,37 @@
+<%-include("partials/header")%>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Camp Booking</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/campground">Campgrounds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>  
+</nav>
+<h1 class="display-2 text-primary">This is the show template</h1>
+<h1 class="display-4 text-primary"><%=camp.name%></h1>
+<p><img src="<%=camp.image%>" alt=""></p>
+<p class="display-4 text-success"><%=camp.description%></p>
+<%-include("partials/footer")%>
