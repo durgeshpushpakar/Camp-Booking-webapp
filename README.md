@@ -1,2 +1,2 @@
 # Camp-Booking-webapp
-DBMS Term Project
+Made by Durgesh Pushpakar 19118024
